@@ -6,6 +6,7 @@
 //  Copyright © 2015年 haibin. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "GHBBaseViewController.h"
 
 @interface MomentsViewController : GHBBaseViewController

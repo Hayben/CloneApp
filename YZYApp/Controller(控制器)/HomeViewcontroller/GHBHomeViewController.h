@@ -6,8 +6,8 @@
 //  Copyright © 2015年 haibin. All rights reserved.
 //
 
-#import "GHBBaseViewController.h"
+#import "GHBTabbarViewcontroller.h"
 
-@interface GHBHomeViewController : GHBBaseViewController
+@interface GHBHomeViewController : GHBTabbarViewcontroller
 
 @end

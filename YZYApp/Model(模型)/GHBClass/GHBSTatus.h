@@ -7,16 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-@class GHBUser,GHBGirl;
+@class YZYUser;
 
 @interface GHBSTatus : NSObject
 
-@property (nonatomic, copy) NSString *text;
 
-@property (nonatomic, strong) GHBUser *user;
+@property (nonatomic, strong) YZYUser *user;
 
-@property (nonatomic, strong) GHBGirl *girl;
-
-@property (nonatomic, strong) GHBSTatus *retweetedGHBStatus;
 
 @end

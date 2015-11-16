@@ -10,4 +10,8 @@
 
 @interface GHBTabbarViewcontroller : UIViewController
 
+- (void)hideFancyBar;
+
+- (void)displayFancyBar;
+
 @end

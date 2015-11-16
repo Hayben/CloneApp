@@ -8,6 +8,10 @@
 
 #import "Constants.h"
 
-@implementation Constants
 
-@end
+/*
+ ** Keys
+ */
+NSString *const YZYActiveUser = @"activeUser";
+NSString *const YZYUserToken = @"userToken";
+NSString *const YZYUserLoginFlag = @"autoLogin";

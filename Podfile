@@ -1,0 +1,8 @@
+platform :ios, '7.0'
+pod 'AFNetworking','~> 2.6.1'
+pod 'SDWebImage'
+pod 'TSMessages'
+pod 'ReactiveCocoa'
+#pod 'RestKit'
+pod 'TSMessages'
+pod 'FastImageCache'

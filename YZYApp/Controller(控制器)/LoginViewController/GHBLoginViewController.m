@@ -16,9 +16,11 @@
 #import "GHBSTatus.h"
 #import "YZYUser.h"
 
-#import "WXApi.h"
+//#import "WXApi.h"
 
 #import "Constants.h"
+
+#import "AFHttpTool.h"
 @interface GHBLoginViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
@@ -33,22 +35,37 @@
     MomentsViewController *MomentsVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"MomentsViewController"];
    // UINavigationController *MomentsNVC = [[UINavigationController alloc]initWithRootViewController:MomentsVC];
     [AppDelegate sharedDelegate].window.rootViewController = MomentsVC;
+    [AFHttpTool loginWithEmail:nil password:nil success:^(id response) {
+        NSLog(@"成功 %@",response);
+    } failure:^(NSError *err) {
+        NSLog(@"错误 %@",err);
+    }];
 }
 - (IBAction)QQLoginAction:(UIButton *)sender {
 }
 - (IBAction)WeixinLoginAction:(id)sender {
-    SendAuthReq* req =[[SendAuthReq alloc ] init];
-    req.scope = @"snsapi_userinfo";
-    req.state = @"mimiss";
-    [WXApi sendReq:req];
+//    SendAuthReq* req =[[SendAuthReq alloc ] init];
+//    req.scope = @"snsapi_userinfo";
+//    req.state = @"mimiss";
+//    [WXApi sendReq:req];
 }
 - (IBAction)SinaLoginAction:(id)sender {
 }
 #pragma mark ---- registerAction
 - (IBAction)registerButtonAction:(id)sender {
+//    [AFHttpTool registerWithEmail:@"haibin@youziyue.com" userName:@"草泥马" password:@"123123" success:^(id response) {
+//        NSLog(@"成功 %@",response);
+//    } failure:^(NSError *err) {
+//        NSLog(@"错误 %@",err);
+//    }];
+    
+    [AFHttpTool giveAnMessageByPhone:@"18616308960"];
+    
+    
 }
 #pragma mark ---- ForgetpasswordAction
 - (IBAction)ForgetpasswordButtonAction:(id)sender {
+    
 }
 
 - (void)viewDidLoad {
@@ -62,7 +79,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
+//- (void)viewWillDisappear:(BOOL)animated{
+//    [super viewWillDisappear:animated];
+//    [[self navigationController]setNavigationBarHidden:NO];
+//}
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [[self navigationController] setNavigationBarHidden:YES];

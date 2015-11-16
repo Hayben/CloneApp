@@ -8,6 +8,10 @@
 
 #import "YZYUser.h"
 
+@interface YZYUser ()
+
+@end
+
 @implementation YZYUser
 
 @end

@@ -210,6 +210,12 @@ static const float collapseAnimationDuration = 0.5;
     
 }
 
+#pragma 我自己加 的
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+        [self collapseAnimation];
+}
+
 #pragma mark - animation
 
 - (void) explode{
