@@ -4,7 +4,7 @@
 //
 //  Created by 123 on 15/10/9.
 //  Copyright © 2015年 haibin. All rights reserved.
-//
+// git 测试
 
 #import "GHBLoginViewController.h"
 #import "MomentsViewController.h"
